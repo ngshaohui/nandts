@@ -98,18 +98,294 @@ describe('arithmetic_logic_unit test for: | 0000000000000000 | 1111111111111111 
 
 })
 
-// | 0000000000000000 | 1111111111111111 | 1 | 1 | 0 | 0 | 0 | 0 | 1111111111111111 | 0 | 1 |
-// | 0000000000000000 | 1111111111111111 | 0 | 0 | 1 | 1 | 0 | 1 | 1111111111111111 | 0 | 1 |
-// | 0000000000000000 | 1111111111111111 | 1 | 1 | 0 | 0 | 0 | 1 | 0000000000000000 | 1 | 0 |
-// | 0000000000000000 | 1111111111111111 | 0 | 0 | 1 | 1 | 1 | 1 | 0000000000000000 | 1 | 0 |
-// | 0000000000000000 | 1111111111111111 | 1 | 1 | 0 | 0 | 1 | 1 | 0000000000000001 | 0 | 0 |
-// | 0000000000000000 | 1111111111111111 | 0 | 1 | 1 | 1 | 1 | 1 | 0000000000000001 | 0 | 0 |
-// | 0000000000000000 | 1111111111111111 | 1 | 1 | 0 | 1 | 1 | 1 | 0000000000000000 | 1 | 0 |
-// | 0000000000000000 | 1111111111111111 | 0 | 0 | 1 | 1 | 1 | 0 | 1111111111111111 | 0 | 1 |
-// | 0000000000000000 | 1111111111111111 | 1 | 1 | 0 | 0 | 1 | 0 | 1111111111111110 | 0 | 1 |
-// | 0000000000000000 | 1111111111111111 | 0 | 0 | 0 | 0 | 1 | 0 | 1111111111111111 | 0 | 1 |
-// | 0000000000000000 | 1111111111111111 | 0 | 1 | 0 | 0 | 1 | 1 | 0000000000000001 | 0 | 0 |
-// | 0000000000000000 | 1111111111111111 | 0 | 0 | 0 | 1 | 1 | 1 | 1111111111111111 | 0 | 1 |
+describe('arithmetic_logic_unit test for: | 0000000000000000 | 1111111111111111 | 1 | 1 | 0 | 0 | 0 | 0 |', () => {
+
+  it('should return: | 1111111111111111 | 0 | 1 |', () => {
+    const result = arithmetic_logic_unit(
+      [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+      [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+      true,
+      true,
+      false,
+      false,
+      false,
+      false
+    )
+    expect(result).to.deep.equal(
+      [
+        [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+        false,
+        true
+      ]
+    )
+  })
+
+})
+
+describe('arithmetic_logic_unit test for: | 0000000000000000 | 1111111111111111 | 0 | 0 | 1 | 1 | 0 | 1 |', () => {
+
+  it('should return: | 1111111111111111 | 0 | 1 |', () => {
+    const result = arithmetic_logic_unit(
+      [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+      [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+      false,
+      false,
+      true,
+      true,
+      false,
+      true
+    )
+    expect(result).to.deep.equal(
+      [
+        [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+        false,
+        true
+      ]
+    )
+  })
+
+})
+
+describe('arithmetic_logic_unit test for: | 0000000000000000 | 1111111111111111 | 1 | 1 | 0 | 0 | 0 | 1 |', () => {
+
+  it('should return: | 0000000000000000 | 1 | 0 |', () => {
+    const result = arithmetic_logic_unit(
+      [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+      [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+      true,
+      true,
+      false,
+      false,
+      false,
+      true
+    )
+    expect(result).to.deep.equal(
+      [
+        [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+        true,
+        false
+      ]
+    )
+  })
+
+})
+
+describe('arithmetic_logic_unit test for: | 0000000000000000 | 1111111111111111 | 0 | 0 | 1 | 1 | 1 | 1 |', () => {
+
+  it('should return: | 0000000000000000 | 1 | 0 |', () => {
+    const result = arithmetic_logic_unit(
+      [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+      [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+      false,
+      false,
+      true,
+      true,
+      true,
+      true
+    )
+    expect(result).to.deep.equal(
+      [
+        [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+        true,
+        false
+      ]
+    )
+  })
+
+})
+
+describe('arithmetic_logic_unit test for: | 0000000000000000 | 1111111111111111 | 1 | 1 | 0 | 0 | 1 | 1 |', () => {
+
+  it('should return: | 0000000000000001 | 0 | 0 |', () => {
+    const result = arithmetic_logic_unit(
+      [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+      [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+      true,
+      true,
+      false,
+      false,
+      true,
+      true
+    )
+    expect(result).to.deep.equal(
+      [
+        [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true],
+        false,
+        false
+      ]
+    )
+  })
+
+})
+
+describe('arithmetic_logic_unit test for: | 0000000000000000 | 1111111111111111 | 0 | 1 | 1 | 1 | 1 | 1 |', () => {
+
+  it('should return: | 0000000000000001 | 0 | 0 |', () => {
+    const result = arithmetic_logic_unit(
+      [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+      [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+    )
+    expect(result).to.deep.equal(
+      [
+        [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true],
+        false,
+        false
+      ]
+    )
+  })
+
+})
+
+describe('arithmetic_logic_unit test for: | 0000000000000000 | 1111111111111111 | 1 | 1 | 0 | 1 | 1 | 1 |', () => {
+
+  it('should return: | 0000000000000000 | 1 | 0 |', () => {
+    const result = arithmetic_logic_unit(
+      [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+      [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+      true,
+      true,
+      false,
+      true,
+      true,
+      true
+    )
+    expect(result).to.deep.equal(
+      [
+        [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+        true,
+        false
+      ]
+    )
+  })
+
+})
+
+describe('arithmetic_logic_unit test for: | 0000000000000000 | 1111111111111111 | 0 | 0 | 1 | 1 | 1 | 0 |', () => {
+
+  it('should return: | 1111111111111111 | 0 | 1 |', () => {
+    const result = arithmetic_logic_unit(
+      [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+      [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+      false,
+      false,
+      true,
+      true,
+      true,
+      false
+    )
+    expect(result).to.deep.equal(
+      [
+        [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+        false,
+        true
+      ]
+    )
+  })
+
+})
+
+describe('arithmetic_logic_unit test for: | 0000000000000000 | 1111111111111111 | 1 | 1 | 0 | 0 | 1 | 0 |', () => {
+
+  it('should return: | 1111111111111110 | 0 | 1 |', () => {
+    const result = arithmetic_logic_unit(
+      [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+      [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+      true,
+      true,
+      false,
+      false,
+      true,
+      false
+    )
+    expect(result).to.deep.equal(
+      [
+        [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false],
+        false,
+        true
+      ]
+    )
+  })
+
+})
+
+describe('arithmetic_logic_unit test for: | 0000000000000000 | 1111111111111111 | 0 | 0 | 0 | 0 | 1 | 0 |', () => {
+
+  it('should return: | 1111111111111111 | 0 | 1 |', () => {
+    const result = arithmetic_logic_unit(
+      [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+      [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    )
+    expect(result).to.deep.equal(
+      [
+        [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+        false,
+        true
+      ]
+    )
+  })
+
+})
+
+describe('arithmetic_logic_unit test for: | 0000000000000000 | 1111111111111111 | 0 | 1 | 0 | 0 | 1 | 1 |', () => {
+
+  it('should return: | 0000000000000001 | 0 | 0 |', () => {
+    const result = arithmetic_logic_unit(
+      [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+      [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+      false,
+      true,
+      false,
+      false,
+      true,
+      true
+    )
+    expect(result).to.deep.equal(
+      [
+        [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true],
+        false,
+        false
+      ]
+    )
+  })
+
+})
+
+describe('arithmetic_logic_unit test for: | 0000000000000000 | 1111111111111111 | 0 | 0 | 0 | 1 | 1 | 1 |', () => {
+
+  it('should return: | 1111111111111111 | 0 | 1 |', () => {
+    const result = arithmetic_logic_unit(
+      [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+      [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+      false,
+      false,
+      false,
+      true,
+      true,
+      true
+    )
+    expect(result).to.deep.equal(
+      [
+        [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+        false,
+        true
+      ]
+    )
+  })
+
+})
+
 // | 0000000000000000 | 1111111111111111 | 0 | 0 | 0 | 0 | 0 | 0 | 0000000000000000 | 1 | 0 |
 // | 0000000000000000 | 1111111111111111 | 0 | 1 | 0 | 1 | 0 | 1 | 1111111111111111 | 0 | 1 |
 // | 0000000000010001 | 0000000000000011 | 1 | 0 | 1 | 0 | 1 | 0 | 0000000000000000 | 1 | 0 |

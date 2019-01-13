@@ -26,8 +26,9 @@ export class d_flip_flop {
   setClock(clock: boolean): void {
     this.clock = clock
     if (this.clock) {
-      this.output = this.q
       this.runCircuit()
+    } else {
+      this.output = this.q
     }
   }
 

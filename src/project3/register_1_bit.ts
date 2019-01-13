@@ -34,6 +34,10 @@ export class register_1_bit {
     this.runCircuit()
   }
 
+  getOutput(): boolean {
+    return this.output
+  }
+
   private runCircuit(): void {
     this.mux.set(this.load, this.output, this.input)
     const x0 = this.mux.output
