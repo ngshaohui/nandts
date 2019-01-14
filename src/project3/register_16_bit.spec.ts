@@ -104,7 +104,7 @@ describe('9 register_16_bit test for: set clock true, in -32123, load true', () 
 // | 5    | -32123 |  1  | -32123 |
 describe('10 register_16_bit test for: set clock false', () => {
 
-  it('should return: 0', () => {
+  it('should return: -32123', () => {
     circuit.setClock(false)
     expect(circuit.getDecOutput()).to.equal(-32123)
   })
@@ -114,28 +114,110 @@ describe('10 register_16_bit test for: set clock false', () => {
 // | 5+   | -32123 |  1  | -32123 |
 describe('11 register_16_bit test for: set clock true', () => {
 
-  it('should return: 0', () => {
+  it('should return: -32123', () => {
     circuit.setClock(true)
     expect(circuit.getDecOutput()).to.equal(-32123)
   })
 
 })
 
-// 32123 in binary
-// [false, true, true, true, true, true, false, true, false, true, true, true, true, false, true, true]
+// | 6    | -32123 |  1  | -32123 |
+describe('12 register_16_bit test for: set clock false', () => {
+
+  it('should return: -32123', () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(-32123)
+  })
+
+})
+
+// | 6+   | -32123 |  0  | -32123 |
+describe('13 register_16_bit test for: set clock true, load false', () => {
+
+  it('should return: -32123', () => {
+    circuit.setLoad(false)
+    circuit.setClock(true)
+    expect(circuit.getDecOutput()).to.equal(-32123)
+  })
+
+})
+
+// | 7    | -32123 |  0  | -32123 |
+describe('14 register_16_bit test for: set clock false', () => {
+
+  it('should return: -32123', () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(-32123)
+  })
+
+})
+
+// | 7+   |  12345 |  1  | -32123 |
+describe('15 register_16_bit test for: set clock true, in 12345, load true', () => {
+
+  it('should return: -32123', () => {
+    circuit.setInput(12345)
+    circuit.setLoad(true)
+    circuit.setClock(true)
+    expect(circuit.getDecOutput()).to.equal(-32123)
+  })
+
+})
+
+// | 8    |  12345 |  1  |  12345 |
+describe('16 register_16_bit test for: set clock false', () => {
+
+  it('should return: 12345', () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(12345)
+  })
+
+})
+
+// | 8+   |      0 |  0  |  12345 |
+describe('17 register_16_bit test for: set clock true, in 0, load false', () => {
+
+  it('should return: 12345', () => {
+    circuit.setInput(0)
+    circuit.setLoad(false)
+    circuit.setClock(true)
+    expect(circuit.getDecOutput()).to.equal(12345)
+  })
+
+})
+
+// | 9    |      0 |  0  |  12345 |
+describe('18 register_16_bit test for: set clock false', () => {
+
+  it('should return: 12345', () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(12345)
+  })
+
+})
+
+// | 9+   |      0 |  1  |  12345 |
+describe('19 register_16_bit test for: set clock true, load true', () => {
+
+  it('should return: 12345', () => {
+    circuit.setLoad(true)
+    circuit.setClock(true)
+    expect(circuit.getDecOutput()).to.equal(12345)
+  })
+
+})
+
+// | 10   |      0 |  1  |      0 |
+describe('20 register_16_bit test for: set clock false', () => {
+
+  it('should return: 0', () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(0)
+  })
+
+})
 
 // | time |   in   |load |  out   |
-// | 5    | -32123 |  1  | -32123 |
-// | 5+   | -32123 |  1  | -32123 |
-// | 6    | -32123 |  1  | -32123 |
-// | 6+   | -32123 |  0  | -32123 |
-// | 7    | -32123 |  0  | -32123 |
-// | 7+   |  12345 |  1  | -32123 |
-// | 8    |  12345 |  1  |  12345 |
-// | 8+   |      0 |  0  |  12345 |
-// | 9    |      0 |  0  |  12345 |
-// | 9+   |      0 |  1  |  12345 |
-// | 10   |      0 |  1  |      0 |
 // | 10+  |      1 |  0  |      0 |
 // | 11   |      1 |  0  |      0 |
 // | 11+  |      1 |  1  |      0 |
