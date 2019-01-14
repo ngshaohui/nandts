@@ -134,6 +134,7 @@ export class register_16_bit {
 
     // check if negative
     if (dec_num < 0) {
+      dec_num = dec_num * -1
       bin_arr.unshift(true)
     } else {
       bin_arr.unshift(false)
@@ -142,9 +143,9 @@ export class register_16_bit {
     // convert to binary
     while (dec_num > 0) {
       if (dec_num % 2 == 1) {
-        bin_arr.unshift(true)
+        bin_arr.splice(1, 0, true)
       } else {
-        bin_arr.unshift(false)
+        bin_arr.splice(1, 0, false)
       }
       dec_num = Math.floor(dec_num / 2) // int division
     }
