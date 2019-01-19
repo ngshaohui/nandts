@@ -15,7 +15,22 @@ export class multiplexer_8_way_16_bit {
   h: boolean[]
   output: boolean[]
 
-  constructor(
+  constructor() {
+    this.s0 = false
+    this.s1 = false
+    this.s2 = false
+    this.a = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+    this.b = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+    this.c = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+    this.d = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+    this.e = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+    this.f = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+    this.g = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+    this.h = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+    this.output = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+  }
+
+  setCurcuit(
     s0: boolean,
     s1: boolean,
     s2: boolean,
@@ -27,7 +42,7 @@ export class multiplexer_8_way_16_bit {
     f: boolean[],
     g: boolean[],
     h: boolean[]
-  ) {
+  ): void {
     this.s0 = s0
     this.s1 = s1
     this.s2 = s2
@@ -39,7 +54,6 @@ export class multiplexer_8_way_16_bit {
     this.f = f
     this.g = g
     this.h = h
-    this.output = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
   }
 
   runCircuit(): void {

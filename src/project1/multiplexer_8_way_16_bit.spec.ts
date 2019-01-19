@@ -5,7 +5,8 @@ import 'mocha'
 describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit(
+    const circuit = new multiplexer_8_way_16_bit()
+    circuit.setCurcuit(
       false, false, false,
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
@@ -27,7 +28,8 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit(
+    const circuit = new multiplexer_8_way_16_bit()
+    circuit.setCurcuit(
       false, false, true,
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
@@ -49,7 +51,8 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit(
+    const circuit = new multiplexer_8_way_16_bit()
+    circuit.setCurcuit(
       false, true, false,
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
@@ -71,7 +74,8 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit(
+    const circuit = new multiplexer_8_way_16_bit()
+    circuit.setCurcuit(
       false, true, true,
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
@@ -93,7 +97,8 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit(
+    const circuit = new multiplexer_8_way_16_bit()
+    circuit.setCurcuit(
       true, false, false,
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
@@ -115,7 +120,8 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit(
+    const circuit = new multiplexer_8_way_16_bit()
+    circuit.setCurcuit(
       true, false, true,
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
@@ -137,7 +143,8 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit(
+    const circuit = new multiplexer_8_way_16_bit()
+    circuit.setCurcuit(
       true, true, false,
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
@@ -159,7 +166,8 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit(
+    const circuit = new multiplexer_8_way_16_bit()
+    circuit.setCurcuit(
       true, true, true,
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
@@ -181,7 +189,8 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit(
+    const circuit = new multiplexer_8_way_16_bit()
+    circuit.setCurcuit(
       false, false, false,
       [false, false, false, true, false, false, true, false, false, false, true, true, false, true, false, false],
       [false, false, true, false, false, false, true, true, false, true, false, false, false, true, false, true],
@@ -203,7 +212,8 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit(
+    const circuit = new multiplexer_8_way_16_bit()
+    circuit.setCurcuit(
       false, false, true,
       [false, false, false, true, false, false, true, false, false, false, true, true, false, true, false, false],
       [false, false, true, false, false, false, true, true, false, true, false, false, false, true, false, true],
@@ -225,7 +235,8 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit(
+    const circuit = new multiplexer_8_way_16_bit()
+    circuit.setCurcuit(
       false, true, false,
       [false, false, false, true, false, false, true, false, false, false, true, true, false, true, false, false],
       [false, false, true, false, false, false, true, true, false, true, false, false, false, true, false, true],
@@ -247,7 +258,8 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit(
+    const circuit = new multiplexer_8_way_16_bit()
+    circuit.setCurcuit(
       false, true, true,
       [false, false, false, true, false, false, true, false, false, false, true, true, false, true, false, false],
       [false, false, true, false, false, false, true, true, false, true, false, false, false, true, false, true],
@@ -269,7 +281,8 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit(
+    const circuit = new multiplexer_8_way_16_bit()
+    circuit.setCurcuit(
       true, false, false,
       [false, false, false, true, false, false, true, false, false, false, true, true, false, true, false, false],
       [false, false, true, false, false, false, true, true, false, true, false, false, false, true, false, true],
@@ -291,7 +304,8 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit(
+    const circuit = new multiplexer_8_way_16_bit()
+    circuit.setCurcuit(
       true, false, true,
       [false, false, false, true, false, false, true, false, false, false, true, true, false, true, false, false],
       [false, false, true, false, false, false, true, true, false, true, false, false, false, true, false, true],
@@ -313,7 +327,8 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit(
+    const circuit = new multiplexer_8_way_16_bit()
+    circuit.setCurcuit(
       true, true, false,
       [false, false, false, true, false, false, true, false, false, false, true, true, false, true, false, false],
       [false, false, true, false, false, false, true, true, false, true, false, false, false, true, false, true],
@@ -335,7 +350,8 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 describe('multiplexer_8_way_16_bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit(
+    const circuit = new multiplexer_8_way_16_bit()
+    circuit.setCurcuit(
       true, true, true,
       [false, false, false, true, false, false, true, false, false, false, true, true, false, true, false, false],
       [false, false, true, false, false, false, true, true, false, true, false, false, false, true, false, true],
