@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/shinlos/nandts.svg?branch=master)](https://travis-ci.com/shinlos/nandts)
+
 # logic gates using the nand gate
 
 based on https://www.nand2tetris.org
