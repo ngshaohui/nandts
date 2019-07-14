@@ -1,7 +1,7 @@
 import { Register16Bit } from "./register_16_bit"
 import { Demultiplexer8Way } from "../project1/demultiplexer_8_way"
 import { Multiplexer8Way16Bit } from "../project1/multiplexer_8_way_16_bit"
-import { decToBin, binToDec } from "../utils/base_conversion"
+import { decToBin, binToDec, unsignedDecToBin } from "../utils/base_conversion"
 
 export class Ram8Register16Bit {
   input: boolean[]
@@ -84,7 +84,7 @@ export class Ram8Register16Bit {
   }
 
   setAddress = (address: number): void => {
-    this.address = decToBin(address, 3)
+    this.address = unsignedDecToBin(address, 3)
     this.setRegisterLoad()
   }
 

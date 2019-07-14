@@ -1,3 +1,5 @@
+// TODO
+// refactor this to use unsignedDec?
 export const decToBin = (dec_num: number, num_bits: number): boolean[] => {
   let bin_arr: boolean[]
   bin_arr = []
@@ -9,6 +11,31 @@ export const decToBin = (dec_num: number, num_bits: number): boolean[] => {
   } else {
     bin_arr.unshift(false)
   }
+
+  // convert to binary
+  while (dec_num > 0) {
+    if (dec_num % 2 == 1) {
+      bin_arr.splice(1, 0, true)
+    } else {
+      bin_arr.splice(1, 0, false)
+    }
+    dec_num = Math.floor(dec_num / 2) // int division
+  }
+
+  // pad false before the number and after the sign to make it length 16
+  while (bin_arr.length < num_bits) {
+    bin_arr.splice(1, 0, false)
+  }
+
+  return bin_arr
+}
+
+export const unsignedDecToBin = (
+  dec_num: number,
+  num_bits: number
+): boolean[] => {
+  let bin_arr: boolean[]
+  bin_arr = []
 
   // convert to binary
   while (dec_num > 0) {
