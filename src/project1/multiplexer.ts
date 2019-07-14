@@ -1,7 +1,6 @@
-import { nand_gate } from './nand_gate'
+import { nand_gate } from "./nand_gate"
 
 export function multiplexer(s: boolean, a: boolean, b: boolean) {
-
   const not_s = nand_gate(s, s)
   const a_nand_not_s = nand_gate(a, not_s) // a nand (not s)
   const b_nand_s = nand_gate(b, s)
@@ -10,11 +9,11 @@ export function multiplexer(s: boolean, a: boolean, b: boolean) {
 }
 
 // should eventually deprecate functions and use solely classes
-export class multiplexerClass {
+export class Multiplexer {
   select: boolean
   a: boolean
   b: boolean
-  output: boolean
+  private output: boolean
   constructor() {
     this.select = false
     this.a = false
@@ -35,5 +34,9 @@ export class multiplexerClass {
     const b_nand_s = nand_gate(this.b, this.select)
 
     this.output = nand_gate(a_nand_not_s, b_nand_s)
+  }
+
+  getOutput(): boolean {
+    return this.output
   }
 }

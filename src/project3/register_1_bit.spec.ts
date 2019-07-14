@@ -1,210 +1,174 @@
-import { register_1_bit } from './register_1_bit'
-import { expect } from 'chai'
-import 'mocha'
+import { register_1_bit } from "./register_1_bit"
+import { expect } from "chai"
+import "mocha"
 
 const circuit = new register_1_bit()
 
 // | 0+   |  0  |  0  |  0  |
 // initial: clock false, in false, load false, out false
-describe('1 register_1_bit test for: set clock true', () => {
-
-  it('should return: false', () => {
+describe("1 register_1_bit test for: set clock true", () => {
+  it("should return: false", () => {
     circuit.setClock(true)
     expect(circuit.getOutput()).to.equal(false)
   })
-
 })
 
 // | 1    |  0  |  0  |  0  |
 // initial: clock true, in false, load false, out false
-describe('2 register_1_bit test for: set clock false', () => {
-
-  it('should return: false', () => {
+describe("2 register_1_bit test for: set clock false", () => {
+  it("should return: false", () => {
     circuit.setClock(false)
     expect(circuit.getOutput()).to.equal(false)
   })
-
 })
 
 // | 1+   |  0  |  1  |  0  |
 // initial: clock false, in false, load false, out false
-describe('3 register_1_bit test for: set load true, clock true', () => {
-
-  it('should return: false', () => {
+describe("3 register_1_bit test for: set load true, clock true", () => {
+  it("should return: false", () => {
     circuit.setLoad(true)
     circuit.setClock(true)
     expect(circuit.getOutput()).to.equal(false)
   })
-
 })
 
 // | 2    |  0  |  1  |  0  |
 // initial: clock true, in false, load true, out false
-describe('4 register_1_bit test for: set clock false', () => {
-
-  it('should return: false', () => {
+describe("4 register_1_bit test for: set clock false", () => {
+  it("should return: false", () => {
     circuit.setClock(false)
     expect(circuit.getOutput()).to.equal(false)
   })
-
 })
 
 // | 2+   |  1  |  0  |  0  |
 // initial: clock false, in false, load true, out false
-describe('5 register_1_bit test for: set input true, load false, clock true', () => {
-
-  it('should return: false', () => {
+describe("5 register_1_bit test for: set input true, load false, clock true", () => {
+  it("should return: false", () => {
     circuit.setInput(true)
     circuit.setLoad(false)
     circuit.setClock(true)
     expect(circuit.getOutput()).to.equal(false)
   })
-
 })
 
 // | 3    |  1  |  0  |  0  |
 // initial: clock true, in true, load false, out false
-describe('6 register_1_bit test for: set clock false', () => {
-
-  it('should return: false', () => {
+describe("6 register_1_bit test for: set clock false", () => {
+  it("should return: false", () => {
     circuit.setClock(false)
     expect(circuit.getOutput()).to.equal(false)
   })
-
 })
 
 // | 3+   |  1  |  1  |  0  |
 // initial: clock false, in true, load false, out false
-describe('7 register_1_bit test for: set load true, clock true', () => {
-
-  it('should return: false', () => {
+describe("7 register_1_bit test for: set load true, clock true", () => {
+  it("should return: false", () => {
     circuit.setLoad(true)
     circuit.setClock(true)
     expect(circuit.getOutput()).to.equal(false)
   })
-
 })
 
 // | 4    |  1  |  1  |  1  |
 // initial: clock true, in true, load true, out false
-describe('8 register_1_bit test for: set load true, clock true', () => {
-
-  it('should return: true', () => {
+describe("8 register_1_bit test for: set load true, clock true", () => {
+  it("should return: true", () => {
     circuit.setClock(false)
     expect(circuit.getOutput()).to.equal(true)
   })
-
 })
 
 // | 4+   |  0  |  0  |  1  |
 // initial: clock false, in true, load true, out true
-describe('9 register_1_bit test for: set load true, clock true', () => {
-
-  it('should return: true', () => {
+describe("9 register_1_bit test for: set load true, clock true", () => {
+  it("should return: true", () => {
     circuit.setLoad(false)
     circuit.setInput(false)
     circuit.setClock(true)
     expect(circuit.getOutput()).to.equal(true)
   })
-
 })
 
 // | 5    |  0  |  0  |  1  |
 // initial: clock true, in true, load false, out true
-describe('10 register_1_bit test for: set clock true, load true', () => {
-
-  it('should return: true', () => {
+describe("10 register_1_bit test for: set clock true, load true", () => {
+  it("should return: true", () => {
     circuit.setClock(false)
     expect(circuit.getOutput()).to.equal(true)
   })
-
 })
 
 // | 5+   |  1  |  0  |  1  |
 // initial: clock false, in false, load false, out true
-describe('11 register_1_bit test for: set clock true, in true', () => {
-
-  it('should return: true', () => {
+describe("11 register_1_bit test for: set clock true, in true", () => {
+  it("should return: true", () => {
     circuit.setClock(true)
     circuit.setInput(true)
     expect(circuit.getOutput()).to.equal(true)
   })
-
 })
 
 // | 6    |  1  |  0  |  1  |
-describe('12 register_1_bit test for: set clock false', () => {
-
-  it('should return: true', () => {
+describe("12 register_1_bit test for: set clock false", () => {
+  it("should return: true", () => {
     circuit.setClock(false)
     expect(circuit.getOutput()).to.equal(true)
   })
-
 })
 
 // | 6+   |  0  |  1  |  1  |
-describe('13 register_1_bit test for: set clock true, in false, load true', () => {
-
-  it('should return: true', () => {
+describe("13 register_1_bit test for: set clock true, in false, load true", () => {
+  it("should return: true", () => {
     circuit.setClock(true)
     circuit.setInput(false)
     circuit.setLoad(true)
     expect(circuit.getOutput()).to.equal(true)
   })
-
 })
 
 // | 7    |  0  |  1  |  0  |
-describe('14 register_1_bit test for: set clock false', () => {
-
-  it('should return: false', () => {
+describe("14 register_1_bit test for: set clock false", () => {
+  it("should return: false", () => {
     circuit.setClock(false)
     expect(circuit.getOutput()).to.equal(false)
   })
-
 })
 
 // | 7+   |  1  |  1  |  0  |
-describe('15 register_1_bit test for: set clock true, in true', () => {
-
-  it('should return: false', () => {
+describe("15 register_1_bit test for: set clock true, in true", () => {
+  it("should return: false", () => {
     circuit.setClock(true)
     circuit.setInput(true)
     expect(circuit.getOutput()).to.equal(false)
   })
-
 })
 
 // | 8    |  1  |  1  |  1  |
-describe('16 register_1_bit test for: set clock false', () => {
-
-  it('should return: true', () => {
+describe("16 register_1_bit test for: set clock false", () => {
+  it("should return: true", () => {
     circuit.setClock(false)
     expect(circuit.getOutput()).to.equal(true)
   })
-
 })
 
 // | 8+   |  0  |  0  |  1  |
-describe('17 register_1_bit test for: set clock true, in false, load false', () => {
-
-  it('should return: true', () => {
+describe("17 register_1_bit test for: set clock true, in false, load false", () => {
+  it("should return: true", () => {
     circuit.setClock(true)
     circuit.setInput(false)
     circuit.setLoad(false)
     expect(circuit.getOutput()).to.equal(true)
   })
-
 })
 
 // | 9    |  0  |  0  |  1  |
-describe('18 register_1_bit test for: set clock false', () => {
-
-  it('should return: true', () => {
+describe("18 register_1_bit test for: set clock false", () => {
+  it("should return: true", () => {
     circuit.setClock(false)
     expect(circuit.getOutput()).to.equal(true)
   })
-
 })
 
 // | time | in  |load | out |

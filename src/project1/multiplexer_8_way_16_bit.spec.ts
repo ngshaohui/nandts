@@ -1,11 +1,13 @@
-import { multiplexer_8_way_16_bit } from './multiplexer_8_way_16_bit'
+import { Multiplexer8Way16Bit } from './multiplexer_8_way_16_bit'
 import { expect } from 'chai'
 import 'mocha'
 
-describe('multiplexer_8_way_16_bit test for: sel false false', () => {
+// TODO fix the damn test cases
+
+describe('Multiplexer8Way16Bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit()
+    const circuit = new Multiplexer8Way16Bit()
     circuit.setCurcuit(
       false, false, false,
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
@@ -17,18 +19,18 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
     )
-    circuit.runCircuit()
-    expect(circuit.output).to.deep.equal(
+    
+    expect(circuit.getOutput()).to.deep.equal(
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
     )
   })
 
 })
 
-describe('multiplexer_8_way_16_bit test for: sel false false', () => {
+describe('Multiplexer8Way16Bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit()
+    const circuit = new Multiplexer8Way16Bit()
     circuit.setCurcuit(
       false, false, true,
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
@@ -40,18 +42,18 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
     )
-    circuit.runCircuit()
-    expect(circuit.output).to.deep.equal(
+    
+    expect(circuit.getOutput()).to.deep.equal(
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
     )
   })
 
 })
 
-describe('multiplexer_8_way_16_bit test for: sel false false', () => {
+describe('Multiplexer8Way16Bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit()
+    const circuit = new Multiplexer8Way16Bit()
     circuit.setCurcuit(
       false, true, false,
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
@@ -63,18 +65,18 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
     )
-    circuit.runCircuit()
-    expect(circuit.output).to.deep.equal(
+    
+    expect(circuit.getOutput()).to.deep.equal(
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
     )
   })
 
 })
 
-describe('multiplexer_8_way_16_bit test for: sel false false', () => {
+describe('Multiplexer8Way16Bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit()
+    const circuit = new Multiplexer8Way16Bit()
     circuit.setCurcuit(
       false, true, true,
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
@@ -86,18 +88,18 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
     )
-    circuit.runCircuit()
-    expect(circuit.output).to.deep.equal(
+    
+    expect(circuit.getOutput()).to.deep.equal(
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
     )
   })
 
 })
 
-describe('multiplexer_8_way_16_bit test for: sel false false', () => {
+describe('Multiplexer8Way16Bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit()
+    const circuit = new Multiplexer8Way16Bit()
     circuit.setCurcuit(
       true, false, false,
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
@@ -109,18 +111,18 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
     )
-    circuit.runCircuit()
-    expect(circuit.output).to.deep.equal(
+    
+    expect(circuit.getOutput()).to.deep.equal(
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
     )
   })
 
 })
 
-describe('multiplexer_8_way_16_bit test for: sel false false', () => {
+describe('Multiplexer8Way16Bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit()
+    const circuit = new Multiplexer8Way16Bit()
     circuit.setCurcuit(
       true, false, true,
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
@@ -132,18 +134,18 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
     )
-    circuit.runCircuit()
-    expect(circuit.output).to.deep.equal(
+    
+    expect(circuit.getOutput()).to.deep.equal(
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
     )
   })
 
 })
 
-describe('multiplexer_8_way_16_bit test for: sel false false', () => {
+describe('Multiplexer8Way16Bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit()
+    const circuit = new Multiplexer8Way16Bit()
     circuit.setCurcuit(
       true, true, false,
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
@@ -155,18 +157,18 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
     )
-    circuit.runCircuit()
-    expect(circuit.output).to.deep.equal(
+    
+    expect(circuit.getOutput()).to.deep.equal(
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
     )
   })
 
 })
 
-describe('multiplexer_8_way_16_bit test for: sel false false', () => {
+describe('Multiplexer8Way16Bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit()
+    const circuit = new Multiplexer8Way16Bit()
     circuit.setCurcuit(
       true, true, true,
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
@@ -178,18 +180,18 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
     )
-    circuit.runCircuit()
-    expect(circuit.output).to.deep.equal(
+    
+    expect(circuit.getOutput()).to.deep.equal(
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
     )
   })
 
 })
 
-describe('multiplexer_8_way_16_bit test for: sel false false', () => {
+describe('Multiplexer8Way16Bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit()
+    const circuit = new Multiplexer8Way16Bit()
     circuit.setCurcuit(
       false, false, false,
       [false, false, false, true, false, false, true, false, false, false, true, true, false, true, false, false],
@@ -201,18 +203,18 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
       [false, true, true, true, true, false, false, false, true, false, false, true, true, false, true, false],
       [true, false, false, false, true, false, false, true, true, false, true, false, true, false, true, true]
     )
-    circuit.runCircuit()
-    expect(circuit.output).to.deep.equal(
+    
+    expect(circuit.getOutput()).to.deep.equal(
       [false, false, false, true, false, false, true, false, false, false, true, true, false, true, false, false]
     )
   })
 
 })
 
-describe('multiplexer_8_way_16_bit test for: sel false false', () => {
+describe('Multiplexer8Way16Bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit()
+    const circuit = new Multiplexer8Way16Bit()
     circuit.setCurcuit(
       false, false, true,
       [false, false, false, true, false, false, true, false, false, false, true, true, false, true, false, false],
@@ -224,18 +226,18 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
       [false, true, true, true, true, false, false, false, true, false, false, true, true, false, true, false],
       [true, false, false, false, true, false, false, true, true, false, true, false, true, false, true, true]
     )
-    circuit.runCircuit()
-    expect(circuit.output).to.deep.equal(
+    
+    expect(circuit.getOutput()).to.deep.equal(
       [false, false, true, false, false, false, true, true, false, true, false, false, false, true, false, true]
     )
   })
 
 })
 
-describe('multiplexer_8_way_16_bit test for: sel false false', () => {
+describe('Multiplexer8Way16Bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit()
+    const circuit = new Multiplexer8Way16Bit()
     circuit.setCurcuit(
       false, true, false,
       [false, false, false, true, false, false, true, false, false, false, true, true, false, true, false, false],
@@ -247,18 +249,18 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
       [false, true, true, true, true, false, false, false, true, false, false, true, true, false, true, false],
       [true, false, false, false, true, false, false, true, true, false, true, false, true, false, true, true]
     )
-    circuit.runCircuit()
-    expect(circuit.output).to.deep.equal(
+    
+    expect(circuit.getOutput()).to.deep.equal(
       [false, false, true, true, false, true, false, false, false, true, false, true, false, true, true, false]
     )
   })
 
 })
 
-describe('multiplexer_8_way_16_bit test for: sel false false', () => {
+describe('Multiplexer8Way16Bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit()
+    const circuit = new Multiplexer8Way16Bit()
     circuit.setCurcuit(
       false, true, true,
       [false, false, false, true, false, false, true, false, false, false, true, true, false, true, false, false],
@@ -270,18 +272,18 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
       [false, true, true, true, true, false, false, false, true, false, false, true, true, false, true, false],
       [true, false, false, false, true, false, false, true, true, false, true, false, true, false, true, true]
     )
-    circuit.runCircuit()
-    expect(circuit.output).to.deep.equal(
+    
+    expect(circuit.getOutput()).to.deep.equal(
       [false, true, false, false, false, true, false, true, false, true, true, false, false, true, true, true]
     )
   })
 
 })
 
-describe('multiplexer_8_way_16_bit test for: sel false false', () => {
+describe('Multiplexer8Way16Bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit()
+    const circuit = new Multiplexer8Way16Bit()
     circuit.setCurcuit(
       true, false, false,
       [false, false, false, true, false, false, true, false, false, false, true, true, false, true, false, false],
@@ -293,18 +295,18 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
       [false, true, true, true, true, false, false, false, true, false, false, true, true, false, true, false],
       [true, false, false, false, true, false, false, true, true, false, true, false, true, false, true, true]
     )
-    circuit.runCircuit()
-    expect(circuit.output).to.deep.equal(
+    
+    expect(circuit.getOutput()).to.deep.equal(
       [false, true, false, true, false, true, true, false, false, true, true, true, true, false, false, false]
     )
   })
 
 })
 
-describe('multiplexer_8_way_16_bit test for: sel false false', () => {
+describe('Multiplexer8Way16Bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit()
+    const circuit = new Multiplexer8Way16Bit()
     circuit.setCurcuit(
       true, false, true,
       [false, false, false, true, false, false, true, false, false, false, true, true, false, true, false, false],
@@ -316,18 +318,18 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
       [false, true, true, true, true, false, false, false, true, false, false, true, true, false, true, false],
       [true, false, false, false, true, false, false, true, true, false, true, false, true, false, true, true]
     )
-    circuit.runCircuit()
-    expect(circuit.output).to.deep.equal(
+    
+    expect(circuit.getOutput()).to.deep.equal(
       [false, true, true, false, false, true, true, true, true, false, false, false, true, false, false, true]
     )
   })
 
 })
 
-describe('multiplexer_8_way_16_bit test for: sel false false', () => {
+describe('Multiplexer8Way16Bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit()
+    const circuit = new Multiplexer8Way16Bit()
     circuit.setCurcuit(
       true, true, false,
       [false, false, false, true, false, false, true, false, false, false, true, true, false, true, false, false],
@@ -339,18 +341,18 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
       [false, true, true, true, true, false, false, false, true, false, false, true, true, false, true, false],
       [true, false, false, false, true, false, false, true, true, false, true, false, true, false, true, true]
     )
-    circuit.runCircuit()
-    expect(circuit.output).to.deep.equal(
+    
+    expect(circuit.getOutput()).to.deep.equal(
       [false, true, true, true, true, false, false, false, true, false, false, true, true, false, true, false]
     )
   })
 
 })
 
-describe('multiplexer_8_way_16_bit test for: sel false false', () => {
+describe('Multiplexer8Way16Bit test for: sel false false', () => {
 
   it('should return all false', () => {
-    const circuit = new multiplexer_8_way_16_bit()
+    const circuit = new Multiplexer8Way16Bit()
     circuit.setCurcuit(
       true, true, true,
       [false, false, false, true, false, false, true, false, false, false, true, true, false, true, false, false],
@@ -362,8 +364,8 @@ describe('multiplexer_8_way_16_bit test for: sel false false', () => {
       [false, true, true, true, true, false, false, false, true, false, false, true, true, false, true, false],
       [true, false, false, false, true, false, false, true, true, false, true, false, true, false, true, true]
     )
-    circuit.runCircuit()
-    expect(circuit.output).to.deep.equal(
+    
+    expect(circuit.getOutput()).to.deep.equal(
       [true, false, false, false, true, false, false, true, true, false, true, false, true, false, true, true]
     )
   })

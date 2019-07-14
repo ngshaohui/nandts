@@ -1,9 +1,9 @@
-import { register_1_bit } from './register_1_bit'
+import { register_1_bit } from "./register_1_bit"
 
 const NUM_BITS = 16
 
 // should use a class since state has to be retained
-export class register_16_bit {
+export class Register16Bit {
   reg_0: register_1_bit
   reg_1: register_1_bit
   reg_2: register_1_bit
@@ -25,26 +25,60 @@ export class register_16_bit {
   clock: boolean
   output: boolean[]
   constructor() {
-    this.reg_0 = new register_1_bit
-    this.reg_1 = new register_1_bit
-    this.reg_2 = new register_1_bit
-    this.reg_3 = new register_1_bit
-    this.reg_4 = new register_1_bit
-    this.reg_5 = new register_1_bit
-    this.reg_6 = new register_1_bit
-    this.reg_7 = new register_1_bit
-    this.reg_8 = new register_1_bit
-    this.reg_9 = new register_1_bit
-    this.reg_10 = new register_1_bit
-    this.reg_11 = new register_1_bit
-    this.reg_12 = new register_1_bit
-    this.reg_13 = new register_1_bit
-    this.reg_14 = new register_1_bit
-    this.reg_15 = new register_1_bit
-    this.input = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+    this.reg_0 = new register_1_bit()
+    this.reg_1 = new register_1_bit()
+    this.reg_2 = new register_1_bit()
+    this.reg_3 = new register_1_bit()
+    this.reg_4 = new register_1_bit()
+    this.reg_5 = new register_1_bit()
+    this.reg_6 = new register_1_bit()
+    this.reg_7 = new register_1_bit()
+    this.reg_8 = new register_1_bit()
+    this.reg_9 = new register_1_bit()
+    this.reg_10 = new register_1_bit()
+    this.reg_11 = new register_1_bit()
+    this.reg_12 = new register_1_bit()
+    this.reg_13 = new register_1_bit()
+    this.reg_14 = new register_1_bit()
+    this.reg_15 = new register_1_bit()
+    this.input = [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
     this.load = false
     this.clock = false
-    this.output = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+    this.output = [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   }
 
   setInput(input_dec: number): void {
@@ -105,6 +139,27 @@ export class register_16_bit {
     this.reg_13.setClock(this.clock)
     this.reg_14.setClock(this.clock)
     this.reg_15.setClock(this.clock)
+  }
+
+  getOutput(): boolean[] {
+    this.output[0] = this.reg_0.getOutput()
+    this.output[1] = this.reg_1.getOutput()
+    this.output[2] = this.reg_2.getOutput()
+    this.output[3] = this.reg_3.getOutput()
+    this.output[4] = this.reg_4.getOutput()
+    this.output[5] = this.reg_5.getOutput()
+    this.output[6] = this.reg_6.getOutput()
+    this.output[7] = this.reg_7.getOutput()
+    this.output[8] = this.reg_8.getOutput()
+    this.output[9] = this.reg_9.getOutput()
+    this.output[10] = this.reg_10.getOutput()
+    this.output[11] = this.reg_11.getOutput()
+    this.output[12] = this.reg_12.getOutput()
+    this.output[13] = this.reg_13.getOutput()
+    this.output[14] = this.reg_14.getOutput()
+    this.output[15] = this.reg_15.getOutput()
+
+    return this.output
   }
 
   getDecOutput(): number {
