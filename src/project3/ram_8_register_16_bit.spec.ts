@@ -136,7 +136,7 @@ describe("17 Ram8Register16Bit test for: set address 1", () => {
   })
 })
 // | 8+   |   7777 |  0  |   1   |  11111 |
-describe("15 Ram8Register16Bit test for: set clock true, set input 7777", () => {
+describe("18 Ram8Register16Bit test for: set clock true, set input 7777", () => {
   it("should return: 11111", () => {
     circuit.setClock(true)
     circuit.setInput(7777)
@@ -144,48 +144,325 @@ describe("15 Ram8Register16Bit test for: set clock true, set input 7777", () => 
   })
 })
 // | 9    |   7777 |  0  |   1   |  11111 |
+describe("19 Ram8Register16Bit test for: set clock false", () => {
+  it("should return: 11111", () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(11111)
+  })
+})
 // | 9+   |   7777 |  1  |   7   |      0 |
+describe("20 Ram8Register16Bit test for: set clock true, set load true, set address 7", () => {
+  it("should return: 0", () => {
+    circuit.setClock(true)
+    circuit.setLoad(true)
+    circuit.setAddress(7)
+    expect(circuit.getDecOutput()).to.equal(0)
+  })
+})
 // | 10   |   7777 |  1  |   7   |   7777 |
+describe("21 Ram8Register16Bit test for: set clock false", () => {
+  it("should return: 7777", () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(7777)
+  })
+})
 // | 10+  |   7777 |  0  |   7   |   7777 |
+describe("22 Ram8Register16Bit test for: set clock true, set load false", () => {
+  it("should return: 7777", () => {
+    circuit.setClock(true)
+    circuit.setLoad(false)
+    expect(circuit.getDecOutput()).to.equal(7777)
+  })
+})
 // | 11   |   7777 |  0  |   7   |   7777 |
+describe("23 Ram8Register16Bit test for: set clock false", () => {
+  it("should return: 7777", () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(7777)
+  })
+})
 // | 11   |   7777 |  0  |   3   |   3333 |
+describe("24 Ram8Register16Bit test for: set address 3", () => {
+  it("should return: 3333", () => {
+    circuit.setAddress(3)
+    expect(circuit.getDecOutput()).to.equal(3333)
+  })
+})
 // | 11   |   7777 |  0  |   7   |   7777 |
+describe("25 Ram8Register16Bit test for: set address 3", () => {
+  it("should return: 7777", () => {
+    circuit.setAddress(7)
+    expect(circuit.getDecOutput()).to.equal(7777)
+  })
+})
 // | 11+  |   7777 |  0  |   0   |      0 |
+describe("26 Ram8Register16Bit test for: set clock true, set address 0", () => {
+  it("should return: 0", () => {
+    circuit.setClock(true)
+    circuit.setAddress(0)
+    expect(circuit.getDecOutput()).to.equal(0)
+  })
+})
 // | 12   |   7777 |  0  |   0   |      0 |
+describe("27 Ram8Register16Bit test for: set clock false", () => {
+  it("should return: 0", () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(0)
+  })
+})
 // | 12   |   7777 |  0  |   1   |  11111 |
+describe("28 Ram8Register16Bit test for: set address 1", () => {
+  it("should return: 11111", () => {
+    circuit.setAddress(1)
+    expect(circuit.getDecOutput()).to.equal(11111)
+  })
+})
 // | 12   |   7777 |  0  |   2   |      0 |
+describe("29 Ram8Register16Bit test for: set address 2", () => {
+  it("should return: 0", () => {
+    circuit.setAddress(2)
+    expect(circuit.getDecOutput()).to.equal(0)
+  })
+})
 // | 12   |   7777 |  0  |   3   |   3333 |
+describe("30 Ram8Register16Bit test for: set address 3", () => {
+  it("should return: 3333", () => {
+    circuit.setAddress(3)
+    expect(circuit.getDecOutput()).to.equal(3333)
+  })
+})
 // | 12   |   7777 |  0  |   4   |      0 |
+describe("31 Ram8Register16Bit test for: set address 4", () => {
+  it("should return: 0", () => {
+    circuit.setAddress(4)
+    expect(circuit.getDecOutput()).to.equal(0)
+  })
+})
 // | 12   |   7777 |  0  |   5   |      0 |
+describe("32 Ram8Register16Bit test for: set address 5", () => {
+  it("should return: 0", () => {
+    circuit.setAddress(5)
+    expect(circuit.getDecOutput()).to.equal(0)
+  })
+})
 // | 12   |   7777 |  0  |   6   |      0 |
+describe("33 Ram8Register16Bit test for: set address 6", () => {
+  it("should return: 0", () => {
+    circuit.setAddress(6)
+    expect(circuit.getDecOutput()).to.equal(0)
+  })
+})
 // | 12   |   7777 |  0  |   7   |   7777 |
+describe("34 Ram8Register16Bit test for: set address 7", () => {
+  it("should return: 7777", () => {
+    circuit.setAddress(7)
+    expect(circuit.getDecOutput()).to.equal(7777)
+  })
+})
 // | 12+  |  21845 |  1  |   0   |      0 |
+describe("35 Ram8Register16Bit test for: set clock true, set input 21845, set load true, set address 0", () => {
+  it("should return: 0", () => {
+    circuit.setClock(true)
+    circuit.setInput(21845)
+    circuit.setLoad(true)
+    circuit.setAddress(0)
+    expect(circuit.getDecOutput()).to.equal(0)
+  })
+})
 // | 13   |  21845 |  1  |   0   |  21845 |
+describe("36 Ram8Register16Bit test for: set clock false", () => {
+  it("should return: 21845", () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(21845)
+  })
+})
 // | 13+  |  21845 |  1  |   1   |  11111 |
+describe("37 Ram8Register16Bit test for: set clock true, set address 1", () => {
+  it("should return: 11111", () => {
+    circuit.setClock(true)
+    circuit.setAddress(1)
+    expect(circuit.getDecOutput()).to.equal(11111)
+  })
+})
 // | 14   |  21845 |  1  |   1   |  21845 |
+describe("38 Ram8Register16Bit test for: set clock false", () => {
+  it("should return: 21845", () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(21845)
+  })
+})
 // | 14+  |  21845 |  1  |   2   |      0 |
+describe("39 Ram8Register16Bit test for: set clock true, set address 2", () => {
+  it("should return: 0", () => {
+    circuit.setClock(true)
+    circuit.setAddress(2)
+    expect(circuit.getDecOutput()).to.equal(0)
+  })
+})
 // | 15   |  21845 |  1  |   2   |  21845 |
+describe("40 Ram8Register16Bit test for: set clock false", () => {
+  it("should return: 21845", () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(21845)
+  })
+})
 // | 15+  |  21845 |  1  |   3   |   3333 |
+describe("41 Ram8Register16Bit test for: set clock true, set address 3", () => {
+  it("should return: 3333", () => {
+    circuit.setClock(true)
+    circuit.setAddress(3)
+    expect(circuit.getDecOutput()).to.equal(3333)
+  })
+})
 // | 16   |  21845 |  1  |   3   |  21845 |
+describe("42 Ram8Register16Bit test for: set clock false", () => {
+  it("should return: 21845", () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(21845)
+  })
+})
 // | 16+  |  21845 |  1  |   4   |      0 |
+describe("43 Ram8Register16Bit test for: set clock true, set address 4", () => {
+  it("should return: 0", () => {
+    circuit.setClock(true)
+    circuit.setAddress(4)
+    expect(circuit.getDecOutput()).to.equal(0)
+  })
+})
 // | 17   |  21845 |  1  |   4   |  21845 |
+describe("44 Ram8Register16Bit test for: set clock false", () => {
+  it("should return: 21845", () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(21845)
+  })
+})
 // | 17+  |  21845 |  1  |   5   |      0 |
+describe("45 Ram8Register16Bit test for: set clock true, set address 5", () => {
+  it("should return: 0", () => {
+    circuit.setClock(true)
+    circuit.setAddress(5)
+    expect(circuit.getDecOutput()).to.equal(0)
+  })
+})
 // | 18   |  21845 |  1  |   5   |  21845 |
+describe("46 Ram8Register16Bit test for: set clock false", () => {
+  it("should return: 21845", () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(21845)
+  })
+})
 // | 18+  |  21845 |  1  |   6   |      0 |
+describe("47 Ram8Register16Bit test for: set clock true, set address 6", () => {
+  it("should return: 0", () => {
+    circuit.setClock(true)
+    circuit.setAddress(6)
+    expect(circuit.getDecOutput()).to.equal(0)
+  })
+})
 // | 19   |  21845 |  1  |   6   |  21845 |
+describe("48 Ram8Register16Bit test for: set clock false", () => {
+  it("should return: 21845", () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(21845)
+  })
+})
 // | 19+  |  21845 |  1  |   7   |   7777 |
+describe("49 Ram8Register16Bit test for: set clock true, set address 7", () => {
+  it("should return: 7777", () => {
+    circuit.setClock(true)
+    circuit.setAddress(7)
+    expect(circuit.getDecOutput()).to.equal(7777)
+  })
+})
 // | 20   |  21845 |  1  |   7   |  21845 |
+describe("50 Ram8Register16Bit test for: set clock false", () => {
+  it("should return: 21845", () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(21845)
+  })
+})
 // | 20+  |  21845 |  0  |   0   |  21845 |
+describe("51 Ram8Register16Bit test for: set clock true, set load false, set address 0", () => {
+  it("should return: 21845", () => {
+    circuit.setClock(true)
+    circuit.setLoad(false)
+    circuit.setAddress(0)
+    expect(circuit.getDecOutput()).to.equal(21845)
+  })
+})
 // | 21   |  21845 |  0  |   0   |  21845 |
+describe("52 Ram8Register16Bit test for: set clock false", () => {
+  it("should return: 21845", () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(21845)
+  })
+})
 // | 21   |  21845 |  0  |   1   |  21845 |
+describe("53 Ram8Register16Bit test for: set address 1", () => {
+  it("should return: 21845", () => {
+    circuit.setAddress(1)
+    expect(circuit.getDecOutput()).to.equal(21845)
+  })
+})
 // | 21   |  21845 |  0  |   2   |  21845 |
+describe("54 Ram8Register16Bit test for: set address 2", () => {
+  it("should return: 21845", () => {
+    circuit.setAddress(2)
+    expect(circuit.getDecOutput()).to.equal(21845)
+  })
+})
 // | 21   |  21845 |  0  |   3   |  21845 |
+describe("55 Ram8Register16Bit test for: set address 3", () => {
+  it("should return: 21845", () => {
+    circuit.setAddress(3)
+    expect(circuit.getDecOutput()).to.equal(21845)
+  })
+})
 // | 21   |  21845 |  0  |   4   |  21845 |
+describe("56 Ram8Register16Bit test for: set address 4", () => {
+  it("should return: 21845", () => {
+    circuit.setAddress(4)
+    expect(circuit.getDecOutput()).to.equal(21845)
+  })
+})
 // | 21   |  21845 |  0  |   5   |  21845 |
+describe("57 Ram8Register16Bit test for: set address 5", () => {
+  it("should return: 21845", () => {
+    circuit.setAddress(5)
+    expect(circuit.getDecOutput()).to.equal(21845)
+  })
+})
 // | 21   |  21845 |  0  |   6   |  21845 |
+describe("58 Ram8Register16Bit test for: set address 6", () => {
+  it("should return: 21845", () => {
+    circuit.setAddress(6)
+    expect(circuit.getDecOutput()).to.equal(21845)
+  })
+})
 // | 21   |  21845 |  0  |   7   |  21845 |
+describe("59 Ram8Register16Bit test for: set address 7", () => {
+  it("should return: 21845", () => {
+    circuit.setAddress(7)
+    expect(circuit.getDecOutput()).to.equal(21845)
+  })
+})
 // | 21+  | -21846 |  1  |   0   |  21845 |
+describe("60 Ram8Register16Bit test for: set clock true, set input -21846, set load true, set address 0", () => {
+  it("should return: 21845", () => {
+    circuit.setClock(true)
+    circuit.setLoad(true)
+    circuit.setAddress(0)
+    circuit.setInput(-21846)
+    expect(circuit.getDecOutput()).to.equal(21845)
+  })
+})
 // | 22   | -21846 |  1  |   0   | -21846 |
+describe("61 Ram8Register16Bit test for: set clock false", () => {
+  it("should return: -21846", () => {
+    circuit.setClock(false)
+    expect(circuit.getDecOutput()).to.equal(-21846)
+  })
+})
 // | 22+  | -21846 |  0  |   0   | -21846 |
 // | 23   | -21846 |  0  |   0   | -21846 |
 // | 23   | -21846 |  0  |   1   |  21845 |
