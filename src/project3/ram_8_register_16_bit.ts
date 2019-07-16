@@ -83,7 +83,11 @@ export class Ram8Register16Bit {
     this.reg16Bit8.setClock(clock)
   }
 
-  setAddress = (address: number): void => {
+  setAddress = (address: boolean[]): void => {
+    this.address = address
+  }
+
+  setDecAddress = (address: number): void => {
     this.address = unsignedDecToBin(address, 3)
     this.setRegisterLoad()
   }
@@ -104,6 +108,24 @@ export class Ram8Register16Bit {
     this.reg16Bit6.setLoad(this.sel[5])
     this.reg16Bit7.setLoad(this.sel[6])
     this.reg16Bit8.setLoad(this.sel[7])
+  }
+
+  getOutput(): boolean[] {
+    this.mux8Way16Bit.setCurcuit(
+      this.address[0],
+      this.address[1],
+      this.address[2],
+      this.reg16Bit1.getOutput(),
+      this.reg16Bit2.getOutput(),
+      this.reg16Bit3.getOutput(),
+      this.reg16Bit4.getOutput(),
+      this.reg16Bit5.getOutput(),
+      this.reg16Bit6.getOutput(),
+      this.reg16Bit7.getOutput(),
+      this.reg16Bit8.getOutput()
+    )
+
+    return this.mux8Way16Bit.getOutput()
   }
 
   getDecOutput(): number {

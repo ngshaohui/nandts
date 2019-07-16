@@ -55,7 +55,7 @@ describe("7 Ram8Register16Bit test for: set clock true, load true, address 1", (
   it("should return: 0", () => {
     circuit.setClock(true)
     circuit.setLoad(true)
-    circuit.setAddress(1)
+    circuit.setDecAddress(1)
     expect(circuit.getDecOutput()).to.equal(0)
   })
 })
@@ -71,7 +71,7 @@ describe("9 Ram8Register16Bit test for: set clock true, load false, address 0", 
   it("should return: 0", () => {
     circuit.setClock(true)
     circuit.setLoad(false)
-    circuit.setAddress(0)
+    circuit.setDecAddress(0)
     expect(circuit.getDecOutput()).to.equal(0)
   })
 })
@@ -87,7 +87,7 @@ describe("11 Ram8Register16Bit test for: set clock true, set input 3333, address
   it("should return: 0", () => {
     circuit.setClock(true)
     circuit.setInput(3333)
-    circuit.setAddress(3)
+    circuit.setDecAddress(3)
     expect(circuit.getDecOutput()).to.equal(0)
   })
 })
@@ -131,7 +131,7 @@ describe("16 Ram8Register16Bit test for: set clock false", () => {
 // | 8    |   3333 |  0  |   1   |  11111 |
 describe("17 Ram8Register16Bit test for: set address 1", () => {
   it("should return: 11111", () => {
-    circuit.setAddress(1)
+    circuit.setDecAddress(1)
     expect(circuit.getDecOutput()).to.equal(11111)
   })
 })
@@ -155,7 +155,7 @@ describe("20 Ram8Register16Bit test for: set clock true, set load true, set addr
   it("should return: 0", () => {
     circuit.setClock(true)
     circuit.setLoad(true)
-    circuit.setAddress(7)
+    circuit.setDecAddress(7)
     expect(circuit.getDecOutput()).to.equal(0)
   })
 })
@@ -184,14 +184,14 @@ describe("23 Ram8Register16Bit test for: set clock false", () => {
 // | 11   |   7777 |  0  |   3   |   3333 |
 describe("24 Ram8Register16Bit test for: set address 3", () => {
   it("should return: 3333", () => {
-    circuit.setAddress(3)
+    circuit.setDecAddress(3)
     expect(circuit.getDecOutput()).to.equal(3333)
   })
 })
 // | 11   |   7777 |  0  |   7   |   7777 |
 describe("25 Ram8Register16Bit test for: set address 3", () => {
   it("should return: 7777", () => {
-    circuit.setAddress(7)
+    circuit.setDecAddress(7)
     expect(circuit.getDecOutput()).to.equal(7777)
   })
 })
@@ -199,7 +199,7 @@ describe("25 Ram8Register16Bit test for: set address 3", () => {
 describe("26 Ram8Register16Bit test for: set clock true, set address 0", () => {
   it("should return: 0", () => {
     circuit.setClock(true)
-    circuit.setAddress(0)
+    circuit.setDecAddress(0)
     expect(circuit.getDecOutput()).to.equal(0)
   })
 })
@@ -213,49 +213,49 @@ describe("27 Ram8Register16Bit test for: set clock false", () => {
 // | 12   |   7777 |  0  |   1   |  11111 |
 describe("28 Ram8Register16Bit test for: set address 1", () => {
   it("should return: 11111", () => {
-    circuit.setAddress(1)
+    circuit.setDecAddress(1)
     expect(circuit.getDecOutput()).to.equal(11111)
   })
 })
 // | 12   |   7777 |  0  |   2   |      0 |
 describe("29 Ram8Register16Bit test for: set address 2", () => {
   it("should return: 0", () => {
-    circuit.setAddress(2)
+    circuit.setDecAddress(2)
     expect(circuit.getDecOutput()).to.equal(0)
   })
 })
 // | 12   |   7777 |  0  |   3   |   3333 |
 describe("30 Ram8Register16Bit test for: set address 3", () => {
   it("should return: 3333", () => {
-    circuit.setAddress(3)
+    circuit.setDecAddress(3)
     expect(circuit.getDecOutput()).to.equal(3333)
   })
 })
 // | 12   |   7777 |  0  |   4   |      0 |
 describe("31 Ram8Register16Bit test for: set address 4", () => {
   it("should return: 0", () => {
-    circuit.setAddress(4)
+    circuit.setDecAddress(4)
     expect(circuit.getDecOutput()).to.equal(0)
   })
 })
 // | 12   |   7777 |  0  |   5   |      0 |
 describe("32 Ram8Register16Bit test for: set address 5", () => {
   it("should return: 0", () => {
-    circuit.setAddress(5)
+    circuit.setDecAddress(5)
     expect(circuit.getDecOutput()).to.equal(0)
   })
 })
 // | 12   |   7777 |  0  |   6   |      0 |
 describe("33 Ram8Register16Bit test for: set address 6", () => {
   it("should return: 0", () => {
-    circuit.setAddress(6)
+    circuit.setDecAddress(6)
     expect(circuit.getDecOutput()).to.equal(0)
   })
 })
 // | 12   |   7777 |  0  |   7   |   7777 |
 describe("34 Ram8Register16Bit test for: set address 7", () => {
   it("should return: 7777", () => {
-    circuit.setAddress(7)
+    circuit.setDecAddress(7)
     expect(circuit.getDecOutput()).to.equal(7777)
   })
 })
@@ -265,7 +265,7 @@ describe("35 Ram8Register16Bit test for: set clock true, set input 21845, set lo
     circuit.setClock(true)
     circuit.setInput(21845)
     circuit.setLoad(true)
-    circuit.setAddress(0)
+    circuit.setDecAddress(0)
     expect(circuit.getDecOutput()).to.equal(0)
   })
 })
@@ -280,7 +280,7 @@ describe("36 Ram8Register16Bit test for: set clock false", () => {
 describe("37 Ram8Register16Bit test for: set clock true, set address 1", () => {
   it("should return: 11111", () => {
     circuit.setClock(true)
-    circuit.setAddress(1)
+    circuit.setDecAddress(1)
     expect(circuit.getDecOutput()).to.equal(11111)
   })
 })
@@ -295,7 +295,7 @@ describe("38 Ram8Register16Bit test for: set clock false", () => {
 describe("39 Ram8Register16Bit test for: set clock true, set address 2", () => {
   it("should return: 0", () => {
     circuit.setClock(true)
-    circuit.setAddress(2)
+    circuit.setDecAddress(2)
     expect(circuit.getDecOutput()).to.equal(0)
   })
 })
@@ -310,7 +310,7 @@ describe("40 Ram8Register16Bit test for: set clock false", () => {
 describe("41 Ram8Register16Bit test for: set clock true, set address 3", () => {
   it("should return: 3333", () => {
     circuit.setClock(true)
-    circuit.setAddress(3)
+    circuit.setDecAddress(3)
     expect(circuit.getDecOutput()).to.equal(3333)
   })
 })
@@ -325,7 +325,7 @@ describe("42 Ram8Register16Bit test for: set clock false", () => {
 describe("43 Ram8Register16Bit test for: set clock true, set address 4", () => {
   it("should return: 0", () => {
     circuit.setClock(true)
-    circuit.setAddress(4)
+    circuit.setDecAddress(4)
     expect(circuit.getDecOutput()).to.equal(0)
   })
 })
@@ -340,7 +340,7 @@ describe("44 Ram8Register16Bit test for: set clock false", () => {
 describe("45 Ram8Register16Bit test for: set clock true, set address 5", () => {
   it("should return: 0", () => {
     circuit.setClock(true)
-    circuit.setAddress(5)
+    circuit.setDecAddress(5)
     expect(circuit.getDecOutput()).to.equal(0)
   })
 })
@@ -355,7 +355,7 @@ describe("46 Ram8Register16Bit test for: set clock false", () => {
 describe("47 Ram8Register16Bit test for: set clock true, set address 6", () => {
   it("should return: 0", () => {
     circuit.setClock(true)
-    circuit.setAddress(6)
+    circuit.setDecAddress(6)
     expect(circuit.getDecOutput()).to.equal(0)
   })
 })
@@ -370,7 +370,7 @@ describe("48 Ram8Register16Bit test for: set clock false", () => {
 describe("49 Ram8Register16Bit test for: set clock true, set address 7", () => {
   it("should return: 7777", () => {
     circuit.setClock(true)
-    circuit.setAddress(7)
+    circuit.setDecAddress(7)
     expect(circuit.getDecOutput()).to.equal(7777)
   })
 })
@@ -386,7 +386,7 @@ describe("51 Ram8Register16Bit test for: set clock true, set load false, set add
   it("should return: 21845", () => {
     circuit.setClock(true)
     circuit.setLoad(false)
-    circuit.setAddress(0)
+    circuit.setDecAddress(0)
     expect(circuit.getDecOutput()).to.equal(21845)
   })
 })
@@ -400,49 +400,49 @@ describe("52 Ram8Register16Bit test for: set clock false", () => {
 // | 21   |  21845 |  0  |   1   |  21845 |
 describe("53 Ram8Register16Bit test for: set address 1", () => {
   it("should return: 21845", () => {
-    circuit.setAddress(1)
+    circuit.setDecAddress(1)
     expect(circuit.getDecOutput()).to.equal(21845)
   })
 })
 // | 21   |  21845 |  0  |   2   |  21845 |
 describe("54 Ram8Register16Bit test for: set address 2", () => {
   it("should return: 21845", () => {
-    circuit.setAddress(2)
+    circuit.setDecAddress(2)
     expect(circuit.getDecOutput()).to.equal(21845)
   })
 })
 // | 21   |  21845 |  0  |   3   |  21845 |
 describe("55 Ram8Register16Bit test for: set address 3", () => {
   it("should return: 21845", () => {
-    circuit.setAddress(3)
+    circuit.setDecAddress(3)
     expect(circuit.getDecOutput()).to.equal(21845)
   })
 })
 // | 21   |  21845 |  0  |   4   |  21845 |
 describe("56 Ram8Register16Bit test for: set address 4", () => {
   it("should return: 21845", () => {
-    circuit.setAddress(4)
+    circuit.setDecAddress(4)
     expect(circuit.getDecOutput()).to.equal(21845)
   })
 })
 // | 21   |  21845 |  0  |   5   |  21845 |
 describe("57 Ram8Register16Bit test for: set address 5", () => {
   it("should return: 21845", () => {
-    circuit.setAddress(5)
+    circuit.setDecAddress(5)
     expect(circuit.getDecOutput()).to.equal(21845)
   })
 })
 // | 21   |  21845 |  0  |   6   |  21845 |
 describe("58 Ram8Register16Bit test for: set address 6", () => {
   it("should return: 21845", () => {
-    circuit.setAddress(6)
+    circuit.setDecAddress(6)
     expect(circuit.getDecOutput()).to.equal(21845)
   })
 })
 // | 21   |  21845 |  0  |   7   |  21845 |
 describe("59 Ram8Register16Bit test for: set address 7", () => {
   it("should return: 21845", () => {
-    circuit.setAddress(7)
+    circuit.setDecAddress(7)
     expect(circuit.getDecOutput()).to.equal(21845)
   })
 })
@@ -451,7 +451,7 @@ describe("60 Ram8Register16Bit test for: set clock true, set input -21846, set l
   it("should return: 21845", () => {
     circuit.setClock(true)
     circuit.setLoad(true)
-    circuit.setAddress(0)
+    circuit.setDecAddress(0)
     circuit.setInput(-21846)
     expect(circuit.getDecOutput()).to.equal(21845)
   })
